@@ -34,15 +34,15 @@ class MirrorStatus:
     STATUS_SEEDING = "Seeding...🌧"
 
 class EngineStatus:
-    STATUS_ARIA = "Aʀɪᴀ 2C v1.35.0"
-    STATUS_GDRIVE = "Gᴏᴏɢʟᴇ Aᴘɪ v2.51.0"
-    STATUS_MEGA = "Mᴇɢᴀsᴅᴋ v3.12.0"
-    STATUS_QB = "Qʙɪᴛ v4.4.2"
-    STATUS_TG = "Pʏʀᴏɢʀᴀᴍ v2.0.27"
-    STATUS_YT = "Yᴛ-Dʟᴘ v2022.5.18"
-    STATUS_EXT = "Exᴛʀᴀᴄᴛ"
-    STATUS_SPLIT = "Fғᴍᴘᴇɢ"
-    STATUS_ZIP = "7Z v16.02"
+    STATUS_ARIA = "Aria2c"
+    STATUS_GDRIVE = "Google API"
+    STATUS_MEGA = "Mega API"
+    STATUS_QB = "qBittorrent"
+    STATUS_TG = "Pyrogram - Uploading on TG"
+    STATUS_YT = "Yt-dlp"
+    STATUS_EXT = "extract | pextract"
+    STATUS_SPLIT = "FFmpeg"
+    STATUS_ZIP = "7z"
 
 SIZE_UNITS = ['B', 'KB', 'MB', 'GB', 'TB', 'PB']
 
@@ -117,8 +117,8 @@ def get_progress_bar_string(status):
     p = 0 if total == 0 else round(completed * 100 / total)
     p = min(max(p, 0), 100)
     cFull = p // 8
-    p_str = '🟩' * cFull
-    p_str += '🟧' * (12 - cFull)
+    p_str = '█' * cFull
+    p_str += '▁' * (12 - cFull)
     p_str = f"[{p_str}]"
     return p_str
 
