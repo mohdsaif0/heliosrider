@@ -63,8 +63,9 @@ def start(update, context):
     reply_markup = InlineKeyboardMarkup(buttons.build_menu(2))
     if CustomFilters.authorized_user(update) or CustomFilters.authorized_chat(update):
         start_string = f'''
-This bot can mirror all your links to Google Drive!
-Type /{BotCommands.HelpCommand} to get a list of available commands
+🙂 I'm CLOUD STATION MIRROR BOT, an AIO Bot which can Mirror Torrents, Direct links, YTDL links & Mega.nz Links to the Google Drive & Leech Them To TG along with some cool addons as well🙃.\n\n
+🤔 Worrying About How to use me 😣? Type /{BotCommands.HelpCommand} to get a list of available commands😉.\n
+Join Updates Channel Wen?🙃
 '''
         sendMarkup(start_string, context.bot, update.message, reply_markup)
     else:
