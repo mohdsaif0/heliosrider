@@ -60,7 +60,7 @@ def start(update, context):
     buttons.buildbutton("🤴 𝐎𝐰𝐧𝐞𝐫 🤴", "https://t.me/Terminator090")
     buttons.buildbutton("😎ᴊᴏɪɴ ᴄʜᴀɴɴᴇʟ😎", "https://t.me/cloudstationn")
     buttons.buildbutton("☠️ 𝐌𝐢𝐫𝐫𝐨𝐫 𝐆𝐫𝐨𝐮𝐩 ☠️", "https://t.me/cloudstation9")
-    reply_markup = InlineKeyboardMarkup(buttons.build_menu(2))from signal import signal, SIGINT
+    reply_markup = InlineKeyboardMarkup(buttons.build_menu(3))from signal import signal, SIGINT
 from os import path as ospath, remove as osremove, execl as osexecl
 from subprocess import run as srun, check_output
 from psutil import disk_usage, cpu_percent, swap_memory, cpu_count, virtual_memory, net_io_counters, boot_time
