@@ -57,12 +57,15 @@ def stats(update, context):
 
 def start(update, context):
     buttons = ButtonMaker()
-    buttons.buildbutton("Repo", "https://github.com/arshsisodiya/helios-mirror")
-    buttons.buildbutton("Support Group", "https://t.me/mirrorsociety")
+    buttons.buildbutton("🤴 𝐎𝐰𝐧𝐞𝐫 🤴", "https://t.me/Terminator090")
+    buttons.buildbutton("😎ᴊᴏɪɴ ᴄʜᴀɴɴᴇʟ😎", "https://t.me/cloudstationn")
+    buttons.buildbutton("☠️ 𝐌𝐢𝐫𝐫𝐨𝐫 𝐆𝐫𝐨𝐮𝐩 ☠️", "https://t.me/cloudstation9")
     reply_markup = InlineKeyboardMarkup(buttons.build_menu(2))
     if CustomFilters.authorized_user(update) or CustomFilters.authorized_chat(update):
-        start_string = f'''
-This bot can mirror all your links to Google Drive!
+        start_string = f'''Hey {uname}!,
+🙂 I'm CLOUD STATION MIRROR BOT, an AIO Bot which can Mirror Torrents, Direct links, YTDL links & Mega.nz Links to the Google Drive & Leech Them To TG along with some cool addons as well🙃.\n\n
+🤔 Worrying About How to use me 😣? Type /{BotCommands.HelpCommand} to get a list of available commands😉.\n
+Join Updates Channel Wen?🙃
 Type /{BotCommands.HelpCommand} to get a list of available commands
 '''
         sendMarkup(start_string, context.bot, update.message, reply_markup)
@@ -192,7 +195,7 @@ help_string = f'''
 Hei, Need Help!!
 '''
 help = telegraph.create_page(
-        title='Helios-Mirror Help',
+        title='Cloud-Mirror Help',
         content=help_string_telegraph + sudo_help_string,
     )["path"]
 
@@ -211,7 +214,7 @@ def main():
                 if ospath.isfile(".restartmsg"):
                     with open(".restartmsg") as f:
                         chat_id, msg_id = map(int, f)
-                    msg = 'Restarted successfully!'
+                    msg = 'Rᴇsᴛᴀʀᴛᴇᴅ sᴜᴄᴄᴇssғᴜʟʟʏ!'
                 else:
                     msg = 'Bot Restarted!'
                 for tag, links in data.items():
@@ -234,7 +237,7 @@ def main():
     if ospath.isfile(".restartmsg"):
         with open(".restartmsg") as f:
             chat_id, msg_id = map(int, f)
-        bot.edit_message_text("Restarted successfully!", chat_id, msg_id)
+        bot.edit_message_text("Rᴇsᴛᴀʀᴛᴇᴅ sᴜᴄᴄᴇssғᴜʟʟʏ!", chat_id, msg_id)
         osremove(".restartmsg")
 
     start_handler = CommandHandler(BotCommands.StartCommand, start, run_async=True)
@@ -254,7 +257,7 @@ def main():
     dispatcher.add_handler(stats_handler)
     dispatcher.add_handler(log_handler)
     updater.start_polling(drop_pending_updates=IGNORE_PENDING_REQUESTS)
-    LOGGER.info("Bot Started!")
+    LOGGER.info("Bᴏᴛ Sᴛᴀʀᴛᴇᴅ!")
     signal(SIGINT, exit_clean_up)
 
 main()
